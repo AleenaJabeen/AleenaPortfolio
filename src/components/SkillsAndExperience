@@ -1,0 +1,54 @@
+const skills = [
+  { name: "React", level: "90%" },
+  { name: "Node.js", level: "85%" },
+  { name: "MongoDB", level: "80%" },
+  { name: "Tailwind CSS", level: "95%" },
+  { name: "Flutter", level: "75%" },
+];
+
+function SkillsAndExperience() {
+  return (
+    <div className="dark:bg-[#1A1A1A] bg-white md:p-16 p-6 grid md:grid-cols-2 gap-16">
+      {/* Skills */}
+      <div>
+        <h2 className="text-4xl font-bold dark:text-white mb-8 italic">SKILLS</h2>
+        <div className="space-y-6">
+          {skills.map((skill) => (
+            <div key={skill.name}>
+              <div className="flex justify-between dark:text-white mb-2">
+                <span>{skill.name}</span>
+                <span>{skill.level}</span>
+              </div>
+              <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: skill.level }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="h-full bg-[#D94100] rounded-full"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Experience */}
+      <div>
+        <h2 className="text-4xl font-bold dark:text-white mb-8 italic">EXPERIENCE</h2>
+        <div className="border-l-2 border-[#D94100] ml-2 space-y-8">
+          {[
+            { title: "Full Stack Developer", company: "Freelance", date: "2024 - Present" },
+            { title: "Software Engineer Intern", company: "Devloom", date: "2023 - 2024" }
+          ].map((exp, i) => (
+            <div key={i} className="relative pl-8">
+              <div className="absolute w-4 h-4 bg-[#D94100] rounded-full -left-[9px] top-1" />
+              <h4 className="text-xl font-bold dark:text-white">{exp.title}</h4>
+              <p className="text-[#D94100]">{exp.company}</p>
+              <p className="text-sm text-gray-500">{exp.date}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
