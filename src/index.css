@@ -3,3 +3,14 @@
 *{
     font-family:'Space Grotesk',sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  pointer-events: none; /* This makes the image "un-clickable" */
+}

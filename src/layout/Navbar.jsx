@@ -6,10 +6,10 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { LuSunMoon } from "react-icons/lu";
 
 const menuItems = [
-  { menu: "About", link: "/about" },
-  { menu: "Services", link: "/services" },
-  { menu: "Projects", link: "/projects" },
-  { menu: "Skills", link: "/skills" },
+  { menu: "About", link: "#about" },
+  { menu: "Services", link: "#services" },
+  { menu: "Projects", link: "#projects" },
+  { menu: "Skills", link: "#skills" },
 ]
 
 function Navbar() {
@@ -45,9 +45,14 @@ document.documentElement.classList.remove('dark');
         <div className="hidden md:flex items-center gap-10">
           <ul className="flex items-center gap-8 text-lg">
             {menuItems.map((item) => (
-              <Link key={item.menu} to={item.link}>
-                {item.menu}
-              </Link>
+             <a 
+  key={item.menu} 
+  href={item.link} // Changed 'to' to 'href'
+  className="hover:text-[#116a9f] transition-colors"
+  onClick={() => setMenuOpen(false)} // Keep this for mobile
+>
+  {item.menu}
+</a>
             ))}
           </ul>
           {/* dark mode */}
@@ -63,13 +68,13 @@ document.documentElement.classList.remove('dark');
         <div className="md:hidden mt-6 dark:text-white text-[#1A1A1A] flex flex-col gap-6">
           <ul className="flex flex-col gap-6 text-base ">
             {menuItems.map((item) => (
-              <Link
+              <a
                 key={item.menu}
-                to={item.link}
+                href={item.link}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.menu}
-              </Link>
+              </a>
             ))}
           </ul>
                     <button onClick={()=>setDarkMode(!darkMode)} className={`${darkMode?"text-white":"text-black"}`}>{darkMode?<LuSunMoon size={26}/>:<MdOutlineDarkMode size={26}/>}</button>
