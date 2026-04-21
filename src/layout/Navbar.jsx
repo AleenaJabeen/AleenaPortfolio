@@ -79,8 +79,13 @@ function Navbar() {
             ))}
           </ul>
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              setDarkMode(!darkMode)
+              setMenuOpen(false)
+            }
+
+            }
+            
             className={`${darkMode ? "text-white" : "text-black"}`}
           >
             {darkMode ? (
