@@ -2,44 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const experiences = [
-  
   {
     role: "Senior Software Engineering Student",
     company: "UET Taxila",
     duration: "2022 - Present",
-    desc: "Building a strong foundation in Software Engineering fundamentals Data Structures, Algorithms, and Software Design Patterns."
+    desc: "Maintaining a CGPA of 3.84 while mastering core engineering principles including Data Structures, Algorithms, and Software Architecture. Developed a strong ethical foundation in professional engineering practices and collaborative project management."
   },
   {
     role: "MERN Fellow",
     company: "Buildable",
     duration: "Sep 2025 - Nov 2025",
-    desc: "Developing high-performance web applications using the MERN stack. Focused on scalable architecture and clean UI/UX."
+    desc: "Mastered full-stack development using the MERN stack to build scalable web applications. Implemented secure user authentication using JWT, managed complex state with Redux Toolkit, and utilized Git for version control and collaborative development."
   },
   {
     role: "Web Developer Intern",
     company: "Bitech, Bahria Phase VII, Rawalpindi",
     duration: "Jul 2025 - Aug 2025",
-    desc: "Worked on frontend components using React and Tailwind CSS. Integrated REST APIs and optimized landing pages."
+    desc: "Focused on modernizing UI/UX by building responsive frontend components with React and Tailwind CSS. Streamlined data flow by integrating RESTful APIs and improved site performance through optimized asset loading and clean code practices."
   },
-  ,
   {
     role: "MERN Intern",
     company: "Innovaronix",
     duration: "Oct 2024 - Jan 2025",
-    desc: "Worked on frontend components using React and Tailwind CSS. Integrated REST APIs and optimized landing pages."
-  }
-  ,
+    desc: "Contributed to the development of robust backend services using Node.js and Express. Integrated MongoDB for efficient data persistence and designed interactive user interfaces that emphasized accessibility and performance."
+  },
   {
     role: "Reactjs & Nextjs Fellow",
     company: "Bytewise Limited",
     duration: "Jun 2024 - Sep 2024",
-    desc: "Worked on frontend components using React and Tailwind CSS. Integrated REST APIs and optimized landing pages."
+    desc: "Explored Server-Side Rendering (SSR) and Static Site Generation (SSG) using Next.js to enhance SEO and load times. Built modular, reusable UI components and refined styling workflows using Tailwind CSS."
   }
 ];
 
 export default function Experience() {
   return (
-    <section className="dark:bg-[#232323] bg-[#f9f9f9] md:p-16 p-6 transition-colors duration-300">
+    <section id="experience" className="dark:bg-[#232323] bg-[#f9f9f9] md:p-16 p-6 transition-colors duration-300">
       <div className="w-[95%] mx-auto">
         <motion.h2 
           initial={{ opacity: 0, x: -30 }}

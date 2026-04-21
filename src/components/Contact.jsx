@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiLinkedin, FiGithub, FiArrowUpRight } from 'react-icons/fi'; // npm install react-icons
+import { FiMail, FiLinkedin, FiGithub, FiArrowUpRight, FiMap, FiMapPin } from 'react-icons/fi'; // npm install react-icons
 
 export default function Contact() {
   const contactMethods = [
@@ -21,6 +21,12 @@ export default function Contact() {
       value: "github.com/AleenaJabeen",
       href: "https://github.com/AleenaJabeen", // Replace with your actual link
       icon: <FiGithub />,
+    },
+    {
+      label: "Location",
+      value: "Rawalpindi,Pakistan",
+      href: "#", 
+      icon: <FiMapPin />,
     },
   ];
 
@@ -62,35 +68,39 @@ export default function Contact() {
               <span className="text-sm font-medium dark:text-gray-300">Available for Full Time Roles</span>
             </div>
           </motion.div>
+         <div className="grid gap-4">
+  {contactMethods.map((method, i) => (
+    <motion.a
+      key={i}
+      href={method.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: i * 0.1 }}
+      className="group flex items-center justify-between p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-[#116a9f] dark:hover:border-[#116a9f] transition-all duration-300 bg-transparent overflow-hidden"
+    >
+      <div className="flex items-center gap-3 sm:gap-4 min-w-0"> {/* min-w-0 is critical for child truncation */}
+        <div className="text-xl sm:text-2xl text-[#116a9f] bg-[#116a9f]/10 p-2 sm:p-3 rounded-lg flex-shrink-0">
+          {method.icon}
+        </div>
+        
+        <div className="min-w-0">
+          <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 font-bold">
+            {method.label}
+          </p>
+          <p className="text-sm sm:text-lg font-medium dark:text-white truncate">
+            {method.value}
+          </p>
+        </div>
+      </div>
 
-          {/* Right Side: Structured Contact Links */}
-          <div className="grid gap-4">
-            {contactMethods.map((method, i) => (
-              <motion.a
-                key={i}
-                href={method.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="group flex items-center justify-between p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-[#116a9f] dark:hover:border-[#116a9f] transition-all duration-300"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="text-2xl text-[#116a9f] bg-[#116a9f]/10 p-3 rounded-lg">
-                    {method.icon}
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500 font-bold">{method.label}</p>
-                    <p className="text-lg font-medium dark:text-white truncate max-w-[200px] sm:max-w-none">
-                      {method.value}
-                    </p>
-                  </div>
-                </div>
-                <FiArrowUpRight className="text-xl text-gray-400 group-hover:text-[#116a9f] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-              </motion.a>
-            ))}
-          </div>
+      <div className="ml-2 flex-shrink-0">
+        <FiArrowUpRight className="text-lg sm:text-xl text-gray-400 group-hover:text-[#116a9f] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+      </div>
+    </motion.a>
+  ))}
+</div>
 
         </div>
       </div>
