@@ -10,6 +10,7 @@ const menuItems = [
   { menu: "Projects", link: "#projects" },
   { menu: "Skills", link: "#skills" },
   { menu: "Experience", link: "#experience" },
+   { menu: "Contact", link: "#contact" },
 ];
 
 function Navbar() {
@@ -58,9 +59,7 @@ function Navbar() {
               <MdOutlineDarkMode size={26} />
             )}
           </button>
-          <button className="text-lg border dark:border-white border-[#1A1A1A] px-4 py-2 rounded-lg">
-            Contact
-          </button>
+         
         </div>
       </div>
 
@@ -94,10 +93,6 @@ function Navbar() {
               <MdOutlineDarkMode size={26} />
             )}
           </button>
-
-          <a href="#contact" className="cursor-pointer border border-white text-base px-4 py-2 rounded-lg text-white w-fit">
-            Contact
-          </a>
         </div>
       )}
     </nav>
