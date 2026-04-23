@@ -191,6 +191,7 @@ export default function Projects() {
               className="group cursor-pointer relative overflow-hidden rounded-xl bg-gray-100 dark:bg-[#232323] border border-gray-300 hover:border-[#116a9f] transition-all shadow-lg"
             >
               <img
+              loading="lazy"
                 src={item.image}
                 alt={item.name}
                 className="w-full md:h-56 h-48 object-fill opacity-90 group-hover:opacity-100 transition-opacity"

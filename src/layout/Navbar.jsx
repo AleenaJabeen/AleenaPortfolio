@@ -17,7 +17,6 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
-    console.log(darkMode);
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {

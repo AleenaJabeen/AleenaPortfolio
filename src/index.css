@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 *{
+  font-display: swap;
     font-family:'Space Grotesk',sans-serif;
 }
 html {

@@ -1,14 +1,14 @@
-import devloom from './Projects/Devloom.png';
-import profile from './Projects/picture.png';
-import about from './Projects/about2.jpeg';
-import stream_bank from './Projects/stream_bank.png'
-import xperience from './Projects/xperience.png'
-import ecommerce from './Projects/ecommerce.png';
-import webcontrol from './Projects/webcontrol.png';
-import smartresume from './Projects/smartresume.png';
-import pdf from './Projects/pdf.png';
-import sporty from './Projects/sporty.png'
-import medtech from './Projects/medtech.png'
+import devloom from './Projects/Devloom.webp';
+import profile from './Projects/picture.webp';
+import about from './Projects/about2.webp';
+import stream_bank from './Projects/stream_bank.webp'
+import xperience from './Projects/xperience.webp'
+import ecommerce from './Projects/ecommerce.webp';
+import webcontrol from './Projects/webcontrol.webp';
+import smartresume from './Projects/smartresume.webp';
+import pdf from './Projects/pdf.webp';
+import sporty from './Projects/sporty.webp'
+import medtech from './Projects/medtech.webp'
 
 
 

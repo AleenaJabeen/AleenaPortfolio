@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react';
 import HeroSection from '../components/HeroSection'
-import Projects from '../components/Projects'
-import About from '../components/About'
-import Experience from '../components/Experience'
-import Skills from '../components/Skills'
-import Contact from '../components/Contact'
 
+
+
+const About = lazy(() => import('../components/About'));
+const Projects = lazy(() => import('../components/Projects'));
+const Skills = lazy(() => import('../components/Skills'));
+const Experience = lazy(() => import('../components/Experience'));
+const Contact = lazy(() => import('../components/Contact'));
 function Home() {
   return (
     <div>
         <HeroSection/>
-        <About/>
-        <Projects/>
-        <Skills/>
-        <Experience/>
-        <Contact/>
-
+       <Suspense fallback={<div className="h-20" />}>
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Contact />
+      </Suspense>
       
     </div>
   )

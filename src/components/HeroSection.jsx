@@ -92,6 +92,8 @@ function HeroSection() {
             <img
               src={profile}
               alt="Aleena Jabeen"
+               fetchPriority="high"
+              loading="eager"
               className="w-[90%] h-[90%] object-contain object-bottom pointer-events-none z-10"
             />
           </div>
