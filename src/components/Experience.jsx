@@ -36,7 +36,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="dark:bg-[#232323] bg-[#f9f9f9] md:p-16 p-6 transition-colors duration-300">
+    <section id="experience" 
+className="dark:bg-[#232323] bg-[#f9f9f9] md:p-16 p-6 transition-colors duration-300 overflow-hidden"    >
       <div className="w-[95%] mx-auto">
         <motion.h2 
           initial={{ opacity: 0, x: -30 }}

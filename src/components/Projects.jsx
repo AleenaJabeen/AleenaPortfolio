@@ -235,7 +235,7 @@ export default function Projects() {
             >
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-5 right-5 z-[110] p-2 bg-black/20 hover:bg-[#116a9f] backdrop-blur-md text-white rounded-full transition-all duration-300 group"
+                className="absolute top-5 right-5 z-[110] p-2 md:bg-black/20 hover:bg-[#116a9f] bg-[#116a9f] backdrop-blur-md text-white rounded-full transition-all duration-300 group"
               >
                 <IoClose
                   size={28}
