@@ -59,7 +59,7 @@ export default function Projects() {
       image: ecommerce,
       category: "Full Stack",
       techStack: ["Html", "CSS", "JavaScript"],
-      liveDemo: "https://trendmart-ecommerce.vercel.app/",
+      liveDemo: null,
       githubRepo: "https://github.com/AleenaJabeen/EcommerceWebsite",
       description:
         "A semester project featuring a full eCommerce system for luxury furniture. Includes both admin and user panels where admins can manage products and orders, while users can browse and purchase items بسهولة.",
@@ -79,7 +79,7 @@ export default function Projects() {
         "JWT",
         "Stripe",
       ],
-      liveDemo: "https://github.com/AleenaJabeen/SmartResume",
+      liveDemo: null,
       githubRepo: "https://github.com/AleenaJabeen/SmartResume",
       description:
         "A full-stack resume builder developed during a web development internship at Bitech. Users can create professional resumes using templates and check ATS scores to improve their chances of selection.",
@@ -91,7 +91,7 @@ export default function Projects() {
       image: webcontrol,
       category: "Full Stack",
       techStack: ["React", "MongoDB", "Nodejs", "Express", "Tailwind CSS"],
-      liveDemo: "https://github.com/AleenaJabeen/WebControl-CMS",
+      liveDemo: null,
       githubRepo: "https://github.com/AleenaJabeen/WebControl-CMS",
       description:
         "A content management system built during a Bitech internship. It enables admins to perform CRUD operations and manage website data efficiently from the backend.",
@@ -103,7 +103,7 @@ export default function Projects() {
       image: pdf,
       category: "Full Stack",
       techStack: ["React", "Nodejs", "Express", "Tailwind CSS"],
-      liveDemo: "https://github.com/AleenaJabeen/PDF-Tool",
+      liveDemo: null,
       githubRepo: "https://github.com/AleenaJabeen/PDF-Tool",
       description:
         "A utility-based web application developed during a Bitech internship that allows users to perform multiple PDF operations such as merging, splitting, and modifying documents بسهولة.",
@@ -191,7 +191,7 @@ export default function Projects() {
               className="group cursor-pointer relative overflow-hidden rounded-xl bg-gray-100 dark:bg-[#232323] border border-gray-300 hover:border-[#116a9f] transition-all shadow-lg"
             >
               <img
-              loading="lazy"
+                loading="lazy"
                 src={item.image}
                 alt={item.name}
                 className="w-full md:h-56 h-48 object-fill opacity-90 group-hover:opacity-100 transition-opacity"
@@ -206,9 +206,9 @@ export default function Projects() {
                   </span>
                 </div>
                 <div className="w-full flex justify-center items-center my-3">
-                <p className="bg-[#116a9f]   text-center py-3 px-6  text-[#FFFFFF] rounded-xl mt-2 text-sm font-medium">
-                  View Project Details
-                </p>
+                  <p className="bg-[#116a9f]   text-center py-3 px-6  text-[#FFFFFF] rounded-xl mt-2 text-sm font-medium">
+                    View Project Details
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -267,24 +267,29 @@ export default function Projects() {
                     {selectedProject.description}
                   </p>
 
-                  <div className="flex justify-center flex-wrap gap-4 mt-auto">
-                    <a
-                      href={selectedProject.liveDemo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 bg-[#116a9f] text-white px-5 py-3 rounded-xl hover:bg-[#116a78] transition-colors font-bold shadow-lg shadow-[#D94100]/20"
-                    >
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
-                    <a
-                      href={selectedProject.githubRepo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 border border-gray-300 dark:border-white/20 dark:text-white px-5 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-bold"
-                    >
-                      <FaGithub /> Source Code
-                    </a>
-                  </div>
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mt-auto w-full">
+  {selectedProject.liveDemo && (
+    <a
+      href={selectedProject.liveDemo}
+      target="_blank"
+      rel="noreferrer"
+      className="w-full sm:flex-1 flex items-center justify-center gap-2 bg-[#116a9f] text-white px-5 py-3 rounded-xl hover:bg-[#116a78] transition-colors font-bold shadow-lg shadow-[#116a9f]/20 text-center"
+    >
+      <FaExternalLinkAlt className="shrink-0" /> 
+      <span className="whitespace-nowrap">Live Demo</span>
+    </a>
+  )}
+  
+  <a
+    href={selectedProject.githubRepo}
+    target="_blank"
+    rel="noreferrer"
+    className="w-full sm:flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 dark:text-white px-5 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-bold text-center"
+  >
+    <FaGithub className="shrink-0" /> 
+    <span className="whitespace-nowrap">Source Code</span>
+  </a>
+</div>
                 </div>
               </div>
             </motion.div>
