@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
 import { profile } from "../assets";
-import resumePDF from "../assets/Projects/AleenaJabeen.pdf";
+import resumePDF from "../assets/Projects/Aleena_Jabeen.pdf";
 
 function HeroSection() {
   const titles = [
