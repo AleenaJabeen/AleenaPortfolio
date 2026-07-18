@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import {
+  codeclarify,
   devloom,
   ecommerce,
   medtech,
@@ -132,6 +133,16 @@ export default function Projects() {
         "A fellowship project built using React and Next.js, integrating AI features such as a chatbot. The platform showcases modern UI with animations using Framer Motion and focuses on healthcare technology solutions.",
       myRole: "Reactjs and Nextjs Fellow",
     },
+    {
+      name: "CodeClarify",
+      image:codeclarify,
+      category: "AI Project",
+      techStack: ["React", "Tailwindcss", "Flask API", "Gemini API"],
+      liveDemo: "https://github.com/AleenaJabeen/CodeClarify",
+      githubRepo: "https://github.com/AleenaJabeen/CodeClarify",
+      description:
+        "CodeClarify is an AI-powered code explanation and review tool that helps developers understand source code quickly. Users can paste code snippets and receive structured insights including summaries, step-by-step explanations, identified concepts, potential issues, and improvement suggestions.",
+    },
   ];
 
   // Logic to filter projects based on state
@@ -140,7 +151,7 @@ export default function Projects() {
       ? projects
       : projects.filter((project) => project.category === filter);
 
-  const categories = ["All", "Frontend", "Full Stack"];
+  const categories = ["All", "Frontend", "Full Stack","AI Project"];
 
   return (
     <div
@@ -267,29 +278,29 @@ export default function Projects() {
                     {selectedProject.description}
                   </p>
 
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mt-auto w-full">
-  {selectedProject.liveDemo && (
-    <a
-      href={selectedProject.liveDemo}
-      target="_blank"
-      rel="noreferrer"
-      className="w-full sm:flex-1 flex items-center justify-center gap-2 bg-[#116a9f] text-white px-5 py-3 rounded-xl hover:bg-[#116a78] transition-colors font-bold shadow-lg shadow-[#116a9f]/20 text-center"
-    >
-      <FaExternalLinkAlt className="shrink-0" /> 
-      <span className="whitespace-nowrap">Live Demo</span>
-    </a>
-  )}
-  
-  <a
-    href={selectedProject.githubRepo}
-    target="_blank"
-    rel="noreferrer"
-    className="w-full sm:flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 dark:text-white px-5 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-bold text-center"
-  >
-    <FaGithub className="shrink-0" /> 
-    <span className="whitespace-nowrap">Source Code</span>
-  </a>
-</div>
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mt-auto w-full">
+                    {selectedProject.liveDemo && (
+                      <a
+                        href={selectedProject.liveDemo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full sm:flex-1 flex items-center justify-center gap-2 bg-[#116a9f] text-white px-5 py-3 rounded-xl hover:bg-[#116a78] transition-colors font-bold shadow-lg shadow-[#116a9f]/20 text-center"
+                      >
+                        <FaExternalLinkAlt className="shrink-0" />
+                        <span className="whitespace-nowrap">Live Demo</span>
+                      </a>
+                    )}
+
+                    <a
+                      href={selectedProject.githubRepo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full sm:flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 dark:text-white px-5 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-bold text-center"
+                    >
+                      <FaGithub className="shrink-0" />
+                      <span className="whitespace-nowrap">Source Code</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>

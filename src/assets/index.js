@@ -9,7 +9,8 @@ import smartresume from './Projects/smartresume.webp';
 import pdf from './Projects/pdf.webp';
 import sporty from './Projects/sporty.webp'
 import medtech from './Projects/medtech.webp'
+import codeclarify from './Projects/codeclarify.png'
 
 
 
-export {devloom,profile,about,stream_bank,xperience,ecommerce,webcontrol,smartresume,pdf,sporty,medtech}
+export {devloom,profile,about,stream_bank,xperience,ecommerce,codeclarify,webcontrol,smartresume,pdf,sporty,medtech}
