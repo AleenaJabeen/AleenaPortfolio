@@ -168,21 +168,21 @@ export default function Projects() {
         </motion.h2>
 
         {/* --- FILTER TABS --- */}
-        <div className="flex gap-2 p-1 bg-gray-100 dark:bg-[#232323] rounded-xl">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${
-                filter === cat
-                  ? "bg-[#116a9f] text-white shadow-lg"
-                  : "text-gray-500 hover:text-[#116a9f] dark:text-gray-400"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+    <div className="flex w-full gap-1 p-1 bg-gray-100 dark:bg-[#232323] rounded-xl">
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setFilter(cat)}
+      className={`flex-1 px-2 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
+        filter === cat
+          ? "bg-[#116a9f] text-white shadow-lg"
+          : "text-gray-500 hover:text-[#116a9f] dark:text-gray-400"
+      }`}
+    >
+      {cat}
+    </button>
+  ))}
+</div>
       </div>
 
       <motion.div
