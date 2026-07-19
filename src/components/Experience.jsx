@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    role: "Senior Software Engineering Student",
+    role: "Software Engineering Graduate",
     company: "UET Taxila",
-    duration: "2022 - Present",
+    duration: "2022 - 2026",
     desc: "Maintaining a CGPA of 3.84 while mastering core engineering principles including Data Structures, Algorithms, and Software Architecture. Developed a strong ethical foundation in professional engineering practices and collaborative project management."
   },
   {
