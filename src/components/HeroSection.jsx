@@ -71,7 +71,7 @@ function HeroSection() {
 </h1>
       <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
   
-  <a href={resumePDF} download="AleenaJabeenResume" className="w-full sm:w-auto">
+  <a href={resumePDF} download="AleenaResume" className="w-full sm:w-auto">
     <Button text="Download Resume" className="w-full sm:w-auto" />
   </a>
 
