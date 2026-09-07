@@ -1,0 +1,101 @@
+import React, { useEffect, useState } from "react";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { IoCloseOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { LuSunMoon } from "react-icons/lu";
+
+const menuItems = [
+  { menu: "About", link: "#about" },
+  { menu: "Projects", link: "#projects" },
+  { menu: "Skills", link: "#skills" },
+  { menu: "Experience", link: "#experience" },
+   { menu: "Contact", link: "#contact" },
+];
+
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  return (
+    <nav className="w-full dark:bg-[#1A1A1A] dark:text-white text-[#1A1A1A] bg-[#FFFFFF] px-6 py-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl md:pl-3">AleenaJabeen.</h1>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-3xl"
+        >
+          {menuOpen ? <IoCloseOutline /> : <HiMenuAlt2 />}
+        </button>
+
+        <div className="hidden md:flex items-center gap-10">
+          <ul className="flex items-center gap-8 text-lg">
+            {menuItems.map((item) => (
+              <a
+                key={item.menu}
+                href={item.link}
+                className="hover:text-[#116a9f] transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.menu}
+              </a>
+            ))}
+          </ul>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className={`${darkMode ? "text-white" : "text-black"}`}
+          >
+            {darkMode ? (
+              <LuSunMoon size={26} />
+            ) : (
+              <MdOutlineDarkMode size={26} />
+            )}
+          </button>
+         
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden mt-6 dark:text-white text-[#1A1A1A] flex flex-col gap-6">
+          <ul className="flex flex-col gap-6 text-base ">
+            {menuItems.map((item) => (
+              <a
+                key={item.menu}
+                href={item.link}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.menu}
+              </a>
+            ))}
+          </ul>
+          <button
+            onClick={() => {
+              setDarkMode(!darkMode)
+              setMenuOpen(false)
+            }
+
+            }
+            
+            className={`${darkMode ? "text-white" : "text-black"}`}
+          >
+            {darkMode ? (
+              <LuSunMoon size={26} />
+            ) : (
+              <MdOutlineDarkMode size={26} />
+            )}
+          </button>
+        </div>
+      )}
+    </nav>
+  );
+}
+
+export default Navbar;
