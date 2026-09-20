@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import {
+  airesearcher,
   codeclarify,
   devloom,
   ecommerce,
+  financetracker,
   medtech,
   pdf,
   smartresume,
@@ -135,13 +137,32 @@ export default function Projects() {
     },
     {
       name: "CodeClarify",
-      image:codeclarify,
+      image: codeclarify,
       category: "AI Project",
       techStack: ["React", "Tailwindcss", "Flask API", "Gemini API"],
       liveDemo: "https://github.com/AleenaJabeen/CodeClarify",
       githubRepo: "https://github.com/AleenaJabeen/CodeClarify",
       description:
         "CodeClarify is an AI-powered code explanation and review tool that helps developers understand source code quickly. Users can paste code snippets and receive structured insights including summaries, step-by-step explanations, identified concepts, potential issues, and improvement suggestions.",
+    },
+
+    {
+      name: "FinanceTracker",
+      image: financetracker,
+      category: "AI Project",
+      techStack: ["Python", "pandas", "matplotlib"],
+      githubRepo: "https://github.com/AleenaJabeen/PersonalFinanceTracker",
+      description:
+        "For my personal finance tracker, I made a simple, efficient tool to manage my budget without complex GUIs or online accounts. I developed this Command Line Interface (CLI) application as a streamlined solution for tracking income and expenses directly from my development terminal. It converts everyday expense logging into actionable financial insights.",
+    },
+    {
+      name: "AI Document Researcher",
+      image: airesearcher,
+      category: "AI Project",
+      techStack: ["Python", "LangChain", "Gemini API", "RAG", "Chroma DB"],
+      githubRepo: "https://github.com/AleenaJabeen/AI-Document-Researcher",
+      description:
+        "AI-powered document research assistant built with Python, LangChain, Gemini, Hugging Face embeddings, ChromaDB, and Streamlit. Upload PDF documents, ask questions in natural language, and receive grounded answers with relevant source-page citations using a Retrieval-Augmented Generation (RAG) pipeline.",
     },
   ];
 
@@ -151,7 +172,7 @@ export default function Projects() {
       ? projects
       : projects.filter((project) => project.category === filter);
 
-  const categories = ["All", "Frontend", "Full Stack","AI Project"];
+  const categories = ["All", "Frontend", "Full Stack", "AI Project"];
 
   return (
     <div
@@ -168,21 +189,21 @@ export default function Projects() {
         </motion.h2>
 
         {/* --- FILTER TABS --- */}
-    <div className="flex w-full gap-1 p-1 bg-gray-100 dark:bg-[#232323] rounded-xl">
-  {categories.map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setFilter(cat)}
-      className={`flex-1 px-2 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
-        filter === cat
-          ? "bg-[#116a9f] text-white shadow-lg"
-          : "text-gray-500 hover:text-[#116a9f] dark:text-gray-400"
-      }`}
-    >
-      {cat}
-    </button>
-  ))}
-</div>
+        <div className="flex w-full gap-1 p-1 bg-gray-100 dark:bg-[#232323] rounded-xl">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
+                filter === cat
+                  ? "bg-[#116a9f] text-white shadow-lg"
+                  : "text-gray-500 hover:text-[#116a9f] dark:text-gray-400"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
       <motion.div

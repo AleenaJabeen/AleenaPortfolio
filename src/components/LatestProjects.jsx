@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import {
+  airesearcher,
   codeclarify,
   financetracker,
-  rozgarhub
+  rozgarhub,
 } from "../assets"; // Adjust asset paths as needed
 
 export default function LatestProjects() {
@@ -14,11 +15,26 @@ export default function LatestProjects() {
       name: "RozgarHub",
       image: rozgarhub,
       category: "Full stack",
-      techStack: ["MERN", "Socket.io", "Twilio", "Real-time Notifications","Leaflet Map API"],
-      liveDemo:"https://rozgar-hub-fyp-one.vercel.app/",
+      techStack: [
+        "MERN",
+        "Socket.io",
+        "Twilio",
+        "Real-time Notifications",
+        "Leaflet Map API",
+      ],
+      liveDemo: "https://rozgar-hub-fyp-one.vercel.app/",
       githubRepo: "https://github.com/AleenaJabeen/RozgarHub-FYP",
       description:
         "Final Year Project,a web based solution for blue-collar sector of Pakista,an online marketplace for customers and service providers built with MERN stack ,Google Map API and WebSocket.",
+    },
+    {
+      name: "AI Document Researcher",
+      image: airesearcher,
+      category: "AI Project",
+      techStack: ["Python", "LangChain", "Gemini API", "RAG", "Chroma DB"],
+      githubRepo: "https://github.com/AleenaJabeen/AI-Document-Researcher",
+      description:
+        "AI-powered document research assistant built with Python, LangChain, Gemini, Hugging Face embeddings, ChromaDB, and Streamlit. Upload PDF documents, ask questions in natural language, and receive grounded answers with relevant source-page citations using a Retrieval-Augmented Generation (RAG) pipeline.",
     },
     {
       name: "FinanceTracker",
@@ -37,7 +53,7 @@ export default function LatestProjects() {
       githubRepo: "https://github.com/AleenaJabeen/CodeClarify",
       description:
         "AI-powered code explanation and review tool delivering summaries, step-by-step insights, and architectural feedback.",
-    }
+    },
   ];
 
   return (

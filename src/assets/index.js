@@ -12,7 +12,8 @@ import medtech from './Projects/medtech.webp'
 import codeclarify from './Projects/codeclarify.png'
 import rozgarhub from './Projects/rozgarhub.png';
 import financetracker from './Projects/financetracker.jpg';
+import airesearcher from './Projects/airesearcher.png';
 
 
 
-export {devloom,profile,about,stream_bank,financetracker,xperience,ecommerce,rozgarhub,codeclarify,webcontrol,smartresume,pdf,sporty,medtech}
+export {devloom,profile,about,stream_bank,airesearcher,financetracker,xperience,ecommerce,rozgarhub,codeclarify,webcontrol,smartresume,pdf,sporty,medtech}
