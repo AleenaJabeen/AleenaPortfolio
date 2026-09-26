@@ -6,6 +6,7 @@ import {
   codeclarify,
   financetracker,
   rozgarhub,
+  socialstream,
 } from "../assets"; // Adjust asset paths as needed
 
 export default function LatestProjects() {
@@ -53,6 +54,23 @@ export default function LatestProjects() {
       githubRepo: "https://github.com/AleenaJabeen/CodeClarify",
       description:
         "AI-powered code explanation and review tool delivering summaries, step-by-step insights, and architectural feedback.",
+    },
+
+    {
+      name: "SocialStream",
+      image: socialstream,
+      category: "Full Stack",
+      techStack: [
+        "Python",
+        "FastAPI",
+        "SQLAlchemy",
+        "SQLite",
+        "React",
+        "Tailwind CSS",
+      ],
+      githubRepo: "https://github.com/AleenaJabeen/SocialStream",
+      description:
+        "Full-stack social media application featuring FastAPI Users with OAuth2 JWT authentication, async SQLAlchemy database operations, ImageKit media uploads, and a responsive React + Tailwind CSS global feed with owner-scoped post deletion.",
     },
   ];
 

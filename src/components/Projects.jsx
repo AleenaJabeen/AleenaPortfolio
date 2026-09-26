@@ -11,6 +11,7 @@ import {
   medtech,
   pdf,
   smartresume,
+  socialstream,
   sporty,
   stream_bank,
   webcontrol,
@@ -163,6 +164,16 @@ export default function Projects() {
       githubRepo: "https://github.com/AleenaJabeen/AI-Document-Researcher",
       description:
         "AI-powered document research assistant built with Python, LangChain, Gemini, Hugging Face embeddings, ChromaDB, and Streamlit. Upload PDF documents, ask questions in natural language, and receive grounded answers with relevant source-page citations using a Retrieval-Augmented Generation (RAG) pipeline.",
+    },
+    
+    {
+      name: "SocialStream",
+      image: socialstream,
+      category: "Full Stack",
+      techStack: ["Python", "FastAPI", "SQLAlchemy","SQLite","React","Tailwind CSS"],
+      githubRepo: "https://github.com/AleenaJabeen/SocialStream",
+      description:
+      "Full-stack social media application featuring FastAPI Users with OAuth2 JWT authentication, async SQLAlchemy database operations, ImageKit media uploads, and a responsive React + Tailwind CSS global feed with owner-scoped post deletion."
     },
   ];
 

@@ -13,7 +13,8 @@ import codeclarify from './Projects/codeclarify.png'
 import rozgarhub from './Projects/rozgarhub.png';
 import financetracker from './Projects/financetracker.jpg';
 import airesearcher from './Projects/airesearcher.png';
+import socialstream from './Projects/socialstream.png'
 
 
 
-export {devloom,profile,about,stream_bank,airesearcher,financetracker,xperience,ecommerce,rozgarhub,codeclarify,webcontrol,smartresume,pdf,sporty,medtech}
+export {devloom,profile,about,stream_bank,airesearcher,socialstream,financetracker,xperience,ecommerce,rozgarhub,codeclarify,webcontrol,smartresume,pdf,sporty,medtech}
